@@ -3,275 +3,294 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-
-    <TextView
-        android:id="@+id/NumTicket_ShopName"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        android:text="놀부 부대찌개"/>
-    
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/NumTicket_itemLayout"
-            android:layout_below="@+id/NumTicket_ShopName"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginEnd="30dp"
-            android:gravity="center"
-            >
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/payment_foodImg"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:layout_margin="10dp"
-                android:background="@drawable/sample_food">
+            <TextView
+                android:id="@+id/NumTicket_ShopName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:text="놀부 부대찌개"/>
 
-            </ImageView>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:id="@+id/NumTicket_menuLayout"
+                android:layout_below="@+id/NumTicket_ShopName"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="10dp"
-                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/NumTicket_menuImg"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/sample_food">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/NumTicket_menuName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="얼큰 부대찌개"
+                        />
+
+                    <TextView
+                        android:id="@+id/NumTicket_menuSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="중(中)"
+                        />
+
+                    <TextView
+                        android:id="@+id/NumTicket_toppings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:text="햄 사리 2개, 라면사리 2개, 햄 사리 2개, 라면사리 2개"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/NumTicket_sendMsgLayout"
+                android:layout_below="@+id/NumTicket_menuLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/white"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/NumTicket_menuName"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
+                    android:text="전달 사항"/>
+
+                <TextView
+                    android:id="@+id/NumTicket_sendMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="13sp"
-                    android:text="얼큰 부대찌개"
-                    />
-
-                <TextView
-                    android:id="@+id/NumTicket_menuSize"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="11sp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:text="중(中)"
-                    />
-
-                <TextView
-                    android:id="@+id/NumTicket_toppings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="11sp"
-                    android:text="햄 사리 2개, 라면사리 2개, 햄 사리 2개, 라면사리 2개"
+                    android:text="양념 조금만 넣어주세요.
+양념 조금만 넣어주세요.
+양념 조금만 넣어주세요.
+양념 조금만 넣어주세요.
+양념 조금만 넣어주세요.
+양념 조금만 넣어주세요.
+양념 조금만 넣어주세요.
+양념 조금만 넣어주세요.
+양념 조금만 넣어주세요."
                     />
 
             </LinearLayout>
 
-        </LinearLayout>
-    
-    <LinearLayout
-        android:id="@+id/NumTicket_sendMsgLayout"
-        android:layout_below="@+id/NumTicket_itemLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@color/white"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:text="전달 사항"/>
-
-        <TextView
-            android:id="@+id/NumTicket_sendMsg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:textSize="13sp"
-            android:text="양념 조금만 넣어주세요. "
-            />
-
-    </LinearLayout>
-
-        <ImageView
-            android:id="@+id/NumTicket_Line1"
-            android:layout_below="@+id/NumTicket_sendMsgLayout"
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/border_dot_line"
-            android:layerType="software"/>
-
-    <LinearLayout
-        android:id="@+id/NumTicket_waitLayout"
-        android:layout_below="@id/NumTicket_Line1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:text="내 주문까지"/>
-
-        <TextView
-            android:id="@+id/NumTicket_waitNum"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"
-            android:textColor="@color/NumberColor"
-            android:background="@drawable/border_menu_diaog_all_edge"
-            android:textStyle="bold"
-            android:textSize="17sp"
-            android:gravity="center"
-            android:text="1"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:text="명 남음"/>
-
-        <ImageButton
-            android:id="@+id/NumTicket_RefreshBtn"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginStart="13dp"
-            android:background="@drawable/icon_f5"/>
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/NumTicket_Line2"
-        android:layout_below="@+id/NumTicket_waitLayout"
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginEnd="5dp"
-        android:background="@drawable/border_dot_line"
-        android:layerType="software"/>
-
-
-
-        <GridLayout
-            android:id="@+id/NumTicket_orderInfo"
-            android:layout_below="@id/NumTicket_Line2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="20dp"
-            android:columnCount="2">
-
-            <TextView
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:text="주문 번호"
-                />
-            <TextView
-                android:id="@+id/NumTicket_orderNum"
-                android:layout_marginLeft="50dp"
-                android:layout_marginStart="50dp"
-                android:textSize="15sp"
-                android:text="0084"
-                />
-
-            <TextView
+            <ImageView
+                android:id="@+id/NumTicket_Line1"
+                android:layout_below="@+id/NumTicket_sendMsgLayout"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
                 android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:text="주문 시간"
-                />
-            <TextView
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/border_dot_line"
+                android:layerType="software"/>
 
-                android:id="@+id/NumTicket_orderDate"
-                android:layout_marginLeft="50dp"
-                android:layout_marginStart="50dp"
-                android:textSize="15sp"
-                android:text="2018-00-00  |  PM 8:00"
-                />
-            <TextView
+            <LinearLayout
+                android:id="@+id/NumTicket_waitLayout"
+                android:layout_below="@id/NumTicket_Line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:text="주문 금액"
-                />
-            <TextView
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:text="내 주문까지"/>
+
+                <TextView
+                    android:id="@+id/NumTicket_waitNum"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/NumberColor"
+                    android:background="@drawable/border_menu_diaog_all_edge"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:text="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:text="명 남음"/>
+
+                <ImageButton
+                    android:id="@+id/NumTicket_RefreshBtn"
+                    android:layout_width="27dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
+                    android:background="@drawable/icon_f5"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/NumTicket_Line2"
+                android:layout_below="@+id/NumTicket_waitLayout"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
                 android:layout_marginTop="10dp"
-                android:id="@+id/NumTicket_orderPrice"
-                android:layout_marginLeft="50dp"
-                android:layout_marginStart="50dp"
-                android:textSize="15sp"
-                android:text="37,000 원"
-                />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:text="결제 수단"
-                />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:id="@+id/NumTicket_OrderType"
-                android:layout_marginLeft="50dp"
-                android:layout_marginStart="50dp"
-                android:textSize="15sp"
-                android:text="신용카드"
-                />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:text="적립 내역"
-                />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:id="@+id/NumTicket_wait"
-                android:layout_marginLeft="50dp"
-                android:layout_marginStart="50dp"
-                android:textSize="15sp"
-                android:text="100 point"
-                />
-        </GridLayout>
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/border_dot_line"
+                android:layerType="software"/>
+
+
+
+            <GridLayout
+                android:id="@+id/NumTicket_orderInfo"
+                android:layout_below="@id/NumTicket_Line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:columnCount="2">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="주문 번호"
+                    />
+                <TextView
+                    android:id="@+id/NumTicket_orderNum"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="15sp"
+                    android:text="0084"
+                    />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="주문 시간"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+
+                    android:id="@+id/NumTicket_orderDate"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="15sp"
+                    android:text="2018-00-00  |  PM 8:00"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="주문 금액"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/NumTicket_orderPrice"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="15sp"
+                    android:text="37,000 원"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="결제 수단"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/NumTicket_orderType"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="15sp"
+                    android:text="신용카드"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="적립 내역"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/NumTicket_point"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="15sp"
+                    android:text="100 point"
+                    />
+            </GridLayout>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
 
 </RelativeLayout>

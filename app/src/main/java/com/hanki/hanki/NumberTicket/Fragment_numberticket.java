@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hanki.hanki.ShopOrder.NetworkItem.ShopResult;
@@ -22,6 +23,23 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Fragment_numberticket extends Fragment {
+    //메뉴 정보
+    TextView NumTicket_ShopName;
+    ImageView NumTicket_menuImg;
+    TextView NumTicket_menuName;
+    TextView NumTicket_menuSize;
+    TextView NumTicket_toppings;
+    TextView NumTicket_sendMsg;
+
+    //대기 순서
+    TextView NumTicket_waitNum;
+
+    //주문 정보
+    TextView NumTicket_orderNum;
+    TextView NumTicket_orderDate;
+    TextView NumTicket_orderPrice;
+    TextView NumTicket_OrderType; //신용카드, 후대폰 결제 등
+    TextView NumTicket_point; //포인트
 
 
     NetworkService networkService;
@@ -37,6 +55,7 @@ public class Fragment_numberticket extends Fragment {
         View view = inflater.inflate(R.layout.home_fragment_numberticket, container, false);
 //        testBtn = view.findViewById(R.id.testBtn);
 //        testTv = view.findViewById(R.id.textTv);
+        init(view);
 
         networkService = Application.getInstance().getNetworkService();
         return view;
@@ -72,5 +91,25 @@ public class Fragment_numberticket extends Fragment {
 //                });
 //            }
 //        });
+    }
+
+    public void init(View view){
+        //메뉴 정보
+        NumTicket_ShopName = (TextView) view.findViewById(R.id.NumTicket_ShopName);
+        NumTicket_menuImg = (ImageView) view.findViewById(R.id.NumTicket_menuImg);
+        NumTicket_menuName = (TextView) view.findViewById(R.id.NumTicket_menuName);
+        NumTicket_menuSize = (TextView) view.findViewById(R.id.NumTicket_menuSize);
+        NumTicket_toppings = (TextView) view.findViewById(R.id.NumTicket_toppings);
+        NumTicket_sendMsg = (TextView) view.findViewById(R.id.NumTicket_sendMsg);
+
+        //대기 순서
+        NumTicket_waitNum = (TextView) view.findViewById(R.id.NumTicket_waitNum);
+
+        //주문 정보
+        NumTicket_orderNum = (TextView) view.findViewById(R.id.NumTicket_orderNum);
+        NumTicket_orderDate = (TextView) view.findViewById(R.id.NumTicket_orderDate);
+        NumTicket_orderPrice = (TextView) view.findViewById(R.id.NumTicket_orderPrice);
+        NumTicket_OrderType = (TextView) view.findViewById(R.id.NumTicket_orderType); //신용카드, 후대폰 결제 등
+        NumTicket_point = (TextView) view.findViewById(R.id.NumTicket_point); //포인트
     }
 }
