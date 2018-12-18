@@ -1,6 +1,7 @@
 package com.hanki.hanki;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 import com.hanki.hanki.Tutorial.TutorialActivity;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.security.Permission;
 import java.util.List;
@@ -80,6 +82,11 @@ public class PermissionActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 
 }

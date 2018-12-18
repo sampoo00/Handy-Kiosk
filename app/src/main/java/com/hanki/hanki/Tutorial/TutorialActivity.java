@@ -1,5 +1,6 @@
 package com.hanki.hanki.Tutorial;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import com.github.vivchar.viewpagerindicator.ViewPagerIndicator;
 import com.hanki.hanki.HomeActivity;
 import com.hanki.hanki.R;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 public class TutorialActivity extends AppCompatActivity {
     ViewPager mViewPager;
@@ -83,7 +85,11 @@ public class TutorialActivity extends AppCompatActivity {
         public int getCount() {
             return NUM_VIEWS;
         }
+    }
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 
 }

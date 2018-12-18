@@ -30,8 +30,10 @@ import com.hanki.hanki.ShopOrder.NetworkItem.ShopResult;
 import com.hanki.hanki.ShopOrder.NetworkItem.ShopTopInfo;
 import com.hanki.hanki.ShopOrder.ShopInfo.Fragment_shopInfo;
 import com.hanki.hanki.ShopOrder.ShopMenu.Fragment_menu;
+import com.hanki.hanki.ShopOrder.ShopReview.Fragment_reviews;
 import com.hanki.hanki.Util.Application;
 import com.hanki.hanki.Util.NetworkService;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -39,7 +41,6 @@ import java.security.NoSuchAlgorithmException;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static com.kakao.util.maps.helper.Utility.getPackageInfo;
 
@@ -307,7 +308,7 @@ public class ShopMainActivity extends AppCompatActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 }
 

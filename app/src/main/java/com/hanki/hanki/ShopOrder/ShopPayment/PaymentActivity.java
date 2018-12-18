@@ -1,5 +1,6 @@
 package com.hanki.hanki.ShopOrder.ShopPayment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import com.hanki.hanki.ShopOrder.ShopPayment.IamPort.iamPortMainActivity;
 
 
 import com.hanki.hanki.R;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.Arrays;
 import java.util.List;
@@ -183,5 +185,10 @@ public class PaymentActivity extends AppCompatActivity {
                 break;
 
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 }

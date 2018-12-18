@@ -1,11 +1,10 @@
 package com.hanki.hanki.Util;
 
-import com.hanki.hanki.R;
+import com.tsengvn.typekit.Typekit;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class Application extends android.app.Application {
 
@@ -29,11 +28,9 @@ public class Application extends android.app.Application {
         buildNetworkService();
         Application.instance = this;
 
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("font/NanumSquareR.ttf")
-                .setFontAttrId(R.attr.fontPath)
-                .build()
-        );
+        Typekit.getInstance()
+                .addNormal(Typekit.createFromAsset(this, "font/NanumSquareR.ttf"))
+                .addBold(Typekit.createFromAsset(this, "font/NanumSquareB.ttf"));
     }
 
     public void buildNetworkService() {

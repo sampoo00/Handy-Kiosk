@@ -1,4 +1,4 @@
-package com.hanki.hanki.ShopOrder;
+package com.hanki.hanki.ShopOrder.ShopReview;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -27,15 +28,13 @@ public class Fragment_reviews extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.shop_main_fragment_reviews, container, false);
-        RelativeLayout writeReviewButton = (RelativeLayout) view.findViewById(R.id.writeReviewButton);
-        ImageView pencil = (ImageView) view.findViewById(R.id.pencil);
-        TextView writeReview = (TextView) view.findViewById(R.id.writeReview);
-
-        writeReviewButton.setOnClickListener(this);
-        pencil.setOnClickListener(this);
-        writeReview.setOnClickListener(this);
-
         reviewListRecyclerView = (RecyclerView) view.findViewById(R.id.reviewListRecyclerView);
+
+        Button writeReviewBtn = (Button) view.findViewById(R.id.writeReviewBtn);
+        Button showMoreReviewBtn = (Button)view.findViewById(R.id.showMoreReviewBtn);
+        writeReviewBtn.setOnClickListener(this);
+        showMoreReviewBtn.setOnClickListener(this);
+
         return view;
     }
 
@@ -57,12 +56,9 @@ public class Fragment_reviews extends Fragment implements View.OnClickListener {
         reviewListRecyclerView.setAdapter(shopReviewAdapter);
     }
 
-    @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.writeReviewButton:
-            case R.id.pencil:
-            case R.id.writeReview:
+            case R.id.writeReviewBtn: //작성 버튼
                 Intent intent = new Intent(getActivity(), WriteReviewActivity.class);
                 startActivity(intent);
                 break;

@@ -1,4 +1,4 @@
-package com.hanki.hanki.ShopOrder;
+package com.hanki.hanki.ShopOrder.ShopReview;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

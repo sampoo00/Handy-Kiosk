@@ -126,14 +126,6 @@ public class Fragment_shopInfo extends Fragment {
         marker.setMarkerType(MapPOIItem.MarkerType.BluePin);
         marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
         mapView.addPOIItem(marker);
-
-        mapView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return true;
-            }
-        });
-
         shopInfo_mapview.addView(mapView);
     }
 

@@ -41,7 +41,6 @@ public class Fragment_numberticket extends Fragment {
     TextView NumTicket_OrderType; //신용카드, 후대폰 결제 등
     TextView NumTicket_point; //포인트
 
-
     NetworkService networkService;
 
     public final static String TAG = "NUMBER_TICKET";

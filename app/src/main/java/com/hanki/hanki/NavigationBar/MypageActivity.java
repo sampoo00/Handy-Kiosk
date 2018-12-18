@@ -1,5 +1,6 @@
 package com.hanki.hanki.NavigationBar;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.hanki.hanki.R;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -146,5 +148,10 @@ public class MypageActivity extends AppCompatActivity {
         Date now = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
         return sdf.format(now);
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 }

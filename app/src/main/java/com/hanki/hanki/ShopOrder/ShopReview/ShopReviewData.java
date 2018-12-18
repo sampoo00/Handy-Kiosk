@@ -1,4 +1,4 @@
-package com.hanki.hanki.ShopOrder;
+package com.hanki.hanki.ShopOrder.ShopReview;
 
 public class ShopReviewData {
     String userName;

@@ -16,7 +16,6 @@
             android:id="@+id/review_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <RelativeLayout
@@ -29,18 +28,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="@string/review_writeReview"
-                    android:textColor="#000"
+                    android:textColor="#444"
                     android:textSize="17sp"
                     android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/review_saveBtn"
-                    android:layout_width="60dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
-                    android:background="@null"
-                    android:text="@string/review_save" />
 
             </RelativeLayout>
 
@@ -55,37 +45,37 @@
 
         <TextView
             android:id="@+id/writeReview_shopName"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="놀부 부대찌개"
-            android:textColor="#000"
-            android:textSize="20sp" />
+            android:textColor="#444"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/writeReview_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/writeReview_shopName"
             android:layout_alignParentRight="true"
+            android:layout_below="@+id/writeReview_shopName"
             android:text="2018.10.03"
-            android:textColor="#000"
-            android:textSize="16sp" />
+            android:textColor="#666" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/writeReview_profile"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_below="@+id/writeReview_shopName"
             android:layout_alignLeft="@+id/writeReview_shopName"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/writeReview_date"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/profile" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/writeReview_profile"
             android:layout_alignBottom="@+id/writeReview_profile"
+            android:layout_alignTop="@+id/writeReview_profile"
             android:layout_toRightOf="@+id/writeReview_profile"
             android:gravity="center_vertical"
             android:orientation="vertical">
@@ -104,6 +94,7 @@
                 android:layout_alignParentRight="true"
                 android:isIndicator="false"
                 android:max="5"
+                android:progressTint="@color/black"
                 android:numStars="5"
                 android:rating="0"
                 android:stepSize="0.5" />
@@ -111,17 +102,30 @@
         </LinearLayout>
 
         <EditText
+            android:id="@+id/writeReviewEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/writeReview_profile"
-            android:layout_alignParentBottom="true"
             android:layout_marginTop="15dp"
             android:background="@drawable/border_mypage_nickname"
             android:gravity="top"
             android:hint="리뷰를 작성해주세요."
-            android:maxLength="144"
+            android:maxLength="130"
+            android:layout_above="@+id/review_saveBtn"
             android:padding="15dp"
+            android:textColor="#444"
             android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/review_saveBtn"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@null"
+            android:text="확인"
+            android:textColor="#ff6167"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

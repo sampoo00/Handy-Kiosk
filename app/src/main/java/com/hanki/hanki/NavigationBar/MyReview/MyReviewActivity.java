@@ -1,5 +1,6 @@
 package com.hanki.hanki.NavigationBar.MyReview;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.hanki.hanki.R;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.ArrayList;
 
@@ -54,5 +56,10 @@ public class MyReviewActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 }

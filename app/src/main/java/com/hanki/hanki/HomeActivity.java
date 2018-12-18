@@ -1,6 +1,6 @@
 package com.hanki.hanki;
 
-import android.bluetooth.BluetoothAdapter;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +30,7 @@ import com.hanki.hanki.NumberTicket.Fragment_numberticket;
 import com.hanki.hanki.Search.SearchActivity;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 //AppCompatActivity
 public class HomeActivity extends AppCompatActivity
@@ -203,5 +204,10 @@ public class HomeActivity extends AppCompatActivity
         if (!bluetoothService.getBluetoothAdapter().isEnabled()) {
             bluetoothService.enableBluetooth();
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 }

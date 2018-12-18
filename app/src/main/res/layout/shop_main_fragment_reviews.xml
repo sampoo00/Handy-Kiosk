@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShopOrder.Fragment_reviews">
+    tools:context=".ShopOrder.ShopReview.Fragment_reviews">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -17,40 +17,15 @@
             android:descendantFocusability="blocksDescendants"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:id="@+id/writeReviewButton"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/writeReviewBtn"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border_write_review_btn"
-                android:onClick="onClick">
-
-                <ImageView
-                    android:id="@+id/pencil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/writeReview"
-                    android:layout_alignTop="@+id/writeReview"
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/ic_mode_edit_black_24dp"
-                    android:backgroundTint="#000"
-                    android:onClick="onClick" />
-
-                <TextView
-                    android:id="@+id/writeReview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/pencil"
-                    android:gravity="center"
-                    android:onClick="onClick"
-                    android:text="@string/writeReview"
-                    android:textColor="#000"
-                    android:textSize="14sp" />
-
-            </RelativeLayout>
+                android:background="@null"
+                android:gravity="center"
+                android:text="리뷰 쓰기"
+                android:textColor="#ff6167"
+                android:textStyle="bold" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/reviewListRecyclerView"
@@ -62,13 +37,14 @@
 
             <Button
                 android:id="@+id/showMoreReviewBtn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="15dp"
                 android:background="@null"
                 android:text="@string/showMoreReview"
-                android:textSize="15sp" />
+                android:textColor="#ff6167"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
