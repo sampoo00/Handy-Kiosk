@@ -15,7 +15,7 @@
         >
 
         <ImageView
-            android:id="@+id/payment_foodImg"
+            android:id="@+id/payment_MenuImg"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
@@ -33,7 +33,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/payment_shopTitle"
+                android:id="@+id/payment_menuName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -42,7 +42,7 @@
                 />
 
             <TextView
-                android:id="@+id/payment_foodSize"
+                android:id="@+id/payment_menuSize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="11sp"
@@ -52,7 +52,7 @@
                 />
 
             <TextView
-                android:id="@+id/payment_topping"
+                android:id="@+id/payment_toppings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="11sp"

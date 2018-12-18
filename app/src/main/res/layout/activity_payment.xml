@@ -47,7 +47,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/payment_totalPriceTxt"
+                        android:id="@+id/payment_totalOrderTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
@@ -94,7 +94,7 @@
                         android:layout_marginTop="20dp"
                         android:background="@color/white"
                         android:gravity="center_vertical"
-                        android:layout_below="@+id/payment_totalPrcieTxt"
+                        android:layout_below="@+id/payment_totalOrderTxt"
                         >
                         <LinearLayout
                             android:layout_width="match_parent"

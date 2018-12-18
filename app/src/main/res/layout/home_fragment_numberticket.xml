@@ -49,16 +49,16 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/payment_shopTitle"
+                    android:id="@+id/NumTicket_menuName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textSize="13sp"
-                    android:text="놀부 부대찌개"
+                    android:text="얼큰 부대찌개"
                     />
 
                 <TextView
-                    android:id="@+id/payment_foodSize"
+                    android:id="@+id/NumTicket_menuSize"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="11sp"
@@ -68,7 +68,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/payment_topping"
+                    android:id="@+id/NumTicket_toppings"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="11sp"
